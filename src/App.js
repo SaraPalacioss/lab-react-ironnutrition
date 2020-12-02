@@ -7,17 +7,24 @@ import Foodbox from './components/Foodbox';
 
 
 
-function App() {
+class App extends React.Component {
+  state={
+    foodsList: foods
+
+  };
+
+render(){
   return (
     <div className="App">
       <header className="App-header">
-      <Foodbox />
+      <Foodbox 
+        foodsList={this.state.foodsList}
+        />
       </header>
        
-       
-   
     </div>
   );
+}
 }
 
 export default App;
